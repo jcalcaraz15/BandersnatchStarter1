@@ -24,7 +24,6 @@ class Machine:
         prediction, *_ = self.model.predict(feature_basis)
         proba, *_ = self.model.predict_proba(feature_basis)
         return prediction, max(proba)
-    #add probability, sprint 5. predict_proba. return max probability
     
     def save(self, filepath):
         # properly save the machine learning model to the specififed filepath using joblib
@@ -37,7 +36,7 @@ class Machine:
     
         return model_info
     
-    # use "model.joblib" incase filepath doesnt work
+        # use "model.joblib" incase filepath doesnt work
     
     def info(self):
 
